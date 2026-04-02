@@ -19,7 +19,7 @@ jobs:
 
     - name: Download Apktool
       run: |
-        wget https://github.com/iBotPeaches/Apktool/releases/latest/download/apktool.jar -O apktool.jar
+        wget https://github.com/iBotPeaches/Apktool/releases/download/v2.9.3/apktool_2.9.3.jar -O apktool.jar
         sudo mv apktool.jar /usr/local/bin/apktool.jar
         echo '#!/bin/bash' | sudo tee /usr/local/bin/apktool
         echo 'java -jar /usr/local/bin/apktool.jar "$@"' | sudo tee -a /usr/local/bin/apktool
