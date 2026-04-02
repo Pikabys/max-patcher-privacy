@@ -34,7 +34,7 @@ jobs:
       run: echo "${ANDROID_HOME}/build-tools/34.0.0" >> $GITHUB_PATH
       shell: bash
 
-    # 🔥 ВОТ ЭТО Я ДОБАВИЛ
+
     - name: Download APK
       run: |
         mkdir -p source_apk
