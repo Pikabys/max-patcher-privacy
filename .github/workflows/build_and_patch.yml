@@ -26,7 +26,10 @@ jobs:
 
           unzip cmdline-tools.zip -d cmdline-tools-temp
 
+          sudo rm -rf /usr/local/lib/android/sdk/cmdline-tools/latest
+
           sudo mkdir -p /usr/local/lib/android/sdk/cmdline-tools/latest
+
           sudo mv cmdline-tools-temp/cmdline-tools/* /usr/local/lib/android/sdk/cmdline-tools/latest/
 
           echo "ANDROID_HOME=/usr/local/lib/android/sdk" >> $GITHUB_ENV
