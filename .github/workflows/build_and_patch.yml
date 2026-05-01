@@ -18,7 +18,7 @@ jobs:
         uses: actions/setup-java@v5
         with:
           distribution: temurin
-          java-version: '17'
+          java-version: 17
 
       - name: Download Apktool
         run: |
@@ -44,8 +44,7 @@ jobs:
       - name: Download APK
         run: |
           mkdir -p source_apk
-
-          wget -O source_apk/ru.oneme.app.apk "PASTE_YOUR_REAL_DIRECT_DOWNLOAD_LINK_HERE"
+          wget -O source_apk/ru.oneme.app.apk "YOUR_DIRECT_APK_LINK_HERE"
 
       - name: Decompile APK
         run: |
@@ -64,7 +63,7 @@ jobs:
         run: |
           apktool b apk_workdir -c -o rebuilt_unsigned.apk
 
-      - name: Zipalign APK
+      - name: Zipalign the APK
         run: |
           zipalign -v 4 rebuilt_unsigned.apk rebuilt_aligned.apk
 
@@ -89,11 +88,11 @@ jobs:
             --key-pass pass:temppassword \
             rebuilt_aligned.apk
 
-      - name: Final APK Rename
+      - name: Final APK
         run: |
           mv rebuilt_aligned.apk patched-app-release.apk
 
-      - name: Upload APK Artifact
+      - name: Upload Patched APK as Artifact
         uses: actions/upload-artifact@v4
         with:
           name: patched-apk
