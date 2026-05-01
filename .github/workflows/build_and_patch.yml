@@ -38,7 +38,7 @@ jobs:
     - name: Download APK
       run: |
         mkdir -p source_apk
-        wget -O source_apk/ru.oneme.app.apk "https://dw.uptodown.net/dwn/25zVoq9l7KOwpH7uunR0VvHFff_cplfTMeC45U_R9UD7ecHM4WdyWCKOrnlH8JnAr_S9_gN_1M80LfbSDk4Tb7eHT4d65DemyLNDgPYvjKdC3iSZqseCqviTbRgQbPQa/UofAcY6F3FDSs1sQs2zaHlu6_HDpYTH99lN3qaZEdihzmhPcXtcuI8vDhnqUtIOgr7uugiYP0WDTGPzF2UsJ2IQksjImAVeFB-9oawdPHGOchvcm7TtxWESjuw_aj5AA/-vfX79WVvK-u0VNNW14v8wvhwlzTG-sclW5uGUhrgouhLASqv9YVPW9ic3gp0GuZWnfi_e_t6vj0DfAAhwiA6Q==/max-26-11-1.apk"
+        wget -O source_apk/ru.oneme.app.apk "xFWEqH0Rt_3TW6-f4GnMQ0HEuYuRnuNVOPu4cko0wo14POqSJl-UkOV2_WhIqd_4PxtnxCteGaSRr9LRl5cis2XZ4lqjfynSrwfcc9AZM_0Czvpg-9A9JY8FJPdwMEBh/1A2Z9iFC9sn7Yp89o-nAPacpEMLjB1MsLKuLK4LAd9C5MTFSLpq_hUQEKqnkX98nrK9_X3-SxZyTFj4eBe_mmoA7sS9F5KzeV8_gkBvbUwV3uZ6mcUZwJvaJHpm9cL2b/15rfOn34tvKI81iFOX81DS9p1SzqC3rCdjkpsufDQTQaVd7b4CUs47GmWu8ONpIz723egmWM5ueE0broj3l8Yw==/"
 
     - name: Decompile APK
       run: apktool d source_apk/ru.oneme.app.apk -f -o apk_workdir
